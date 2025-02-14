@@ -6,29 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generador de Cartas Aleatorias</title>
 
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
 
-    <div class="text-center">
-      <h1 class="mt-5">Generador de Cartas Aleatorias</h1>
-      <div class="centered">
-        <div id="theCard" class="card">
-          <p id="cardContent"></p>
-        </div>
+    <!-- Contador de tiempo -->
+    <div id="countdown">10</div>
+
+    <h1>Generador de Cartas Aleatorias</h1>
+    
+    <div class="controls">
+      <label for="cardWidth">Ancho de la carta</label>
+      <input type="number" id="cardWidth" min="100" max="500" value="300">
+      
+      <label for="cardHeight">Alto de la carta</label>
+      <input type="number" id="cardHeight" min="140" max="700" value="440">
+
+      <button id="resetCard">Reset</button>
+    </div>
+
+    <div class="centered">
+      <div id="theCard" class="card">
+        <p id="cardContent"></p>
+        <span class="card-suit top"></span>
+        <span class="card-suit bottom"></span>
       </div>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://github.com/DavidFarewell">David Farewell</a>
-      </div>
+    </div>
+
+    <div class="fixed-bottom p-4">
+      Made with ❤️ by
+      <a href="https://github.com/DavidFarewell">David Farewell</a>
     </div>
 
     <script type="module" src="./app.js"></script>
   </body>
 </html>
+
+
